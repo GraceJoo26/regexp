@@ -21,7 +21,7 @@ console.log(str.match(regexp2));
 
 const regexp3 = /fox/gi;
 console.log(regexp3.test(str));
-str = str.replace(regexp3, "grace");
+//str = str.replace(regexp3, "grace");
 
 console.log(str.replace(regexp3, "grace"));
 console.log(str);
@@ -31,3 +31,4 @@ console.log(str.match(/d$/gim));
 console.log(str.match(/^t/gim));
 
 console.log(str.match(/h..p/g));
+console.log(str.match(/fox|dog/g));
