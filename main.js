@@ -1,6 +1,6 @@
 console.log(123);
 
-const str = `
+let str = `
 010-1234-5678
 thesecon@gmail.com
 https://www.omdbapi.com/?apikey=7035c60c&s=frozen
@@ -20,3 +20,9 @@ console.log(str.match(regexp2));
 
 const regexp3 = /fox/gi;
 console.log(regexp3.test(str));
+str = str.replace(regexp3, "grace");
+
+console.log(str.replace(regexp3, "grace"));
+console.log(str);
+
+console.log(str.match(/the/gim));
