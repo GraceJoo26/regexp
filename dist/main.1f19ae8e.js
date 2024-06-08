@@ -128,6 +128,11 @@ console.log(str.match(regexp));
 //리터럴
 var regexp2 = /the/gi;
 console.log(str.match(regexp2));
+
+//test
+
+var regexp3 = /fox/gi;
+console.log(regexp3.test(str));
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

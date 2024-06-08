@@ -15,3 +15,8 @@ console.log(str.match(regexp));
 //리터럴
 const regexp2 = /the/gi;
 console.log(str.match(regexp2));
+
+//test
+
+const regexp3 = /fox/gi;
+console.log(regexp3.test(str));
