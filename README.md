@@ -73,3 +73,5 @@ aabbccdd
 | \b         | 63개 문자에 일치하지 않는 경계(boundary)           |
 | \d         | 숫자에(Digit) 일치                                 |
 | \s         | 공백(Space,Tab등)에 일치                           |
+| (?=)       | 앞쪽일치(Lookahead)                                |
+| (?<=)      | 뒤쪽일치(Lookbehind)                               |

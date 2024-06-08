@@ -156,6 +156,8 @@ console.log(str.match(/\s/g)); //1개 이상 숫자 덩어리 찾기
 // \s 사용방법
 var h = "\n  hello    world   !!!   \n";
 console.log(h.replace(/\s/g, ""));
+console.log(str.match(/.{1,}(?=@)/g)); // @ 앞의 문자열 일치
+console.log(str.match(/(?<=@).{1,}/g)); //@ 뒤의 문자열 일치
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

@@ -51,3 +51,6 @@ const h = `
 `;
 
 console.log(h.replace(/\s/g, ""));
+
+console.log(str.match(/.{1,}(?=@)/g)); // @ 앞의 문자열 일치
+console.log(str.match(/(?<=@).{1,}/g)); //@ 뒤의 문자열 일치
