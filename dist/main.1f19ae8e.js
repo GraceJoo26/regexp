@@ -119,7 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"main.js":[function(require,module,exports) {
 console.log(123);
-var str = "\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdbapi.com/?apikey=7035c60c&s=frozen\nThe quick brown fox jumps over the lazy dog.\naabbccdddd\nhttp://naver.com\n\uB3D9\uD574\uBB3C\uACFC \uBC31\uB450\uC0B0\uC774 \uB9C8\uB974\uACE0 \uB2F3\uB3C4\uB85D\n";
+var str = "\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdbapi.com/?apikey=7035c60c&s=frozen\nThe quick brown fox jumps over the lazy dog.\naabbccdddd\nhttp://naver.com\n\uB3D9\uD574\uBB3C\uACFC_\uBC31\uB450\uC0B0\uC774 \uB9C8\uB974\uACE0 \uB2F3\uB3C4\uB85D\n";
 
 //생성자
 var regexp = new RegExp("the", "gi");
@@ -146,8 +146,16 @@ console.log(str.match(/https?/g)); //?앞의 s 가 있을수도 없을수도
 
 console.log(str.match(/\b\w{2,3}\b/g));
 console.log(str.match(/[fox]/g)); //str에서 f나, o나, x 를 찾음
-console.log(str.match(/[0-9]{1,}/g)); //str에서 f나, o나, x 를 찾음
-console.log(str.match(/[가-힣]{1,}/g)); //str에서 f나, o나, x 를 찾음
+console.log(str.match(/[0-9]{1,}/g)); //str에서 0-9숫자중 1개 이상~ 묶음 찾음
+console.log(str.match(/[가]/g)); //str에서 가 를 찾음 -->null
+console.log(str.match(/\w/g)); //str에서 영문, 숫자, _ 찾음
+console.log(str.match(/\bf\w{1,}\b/g)); //boundary (띄어쓰기, 특수문자 등) 사이의 f로 일치하는 단어 1개이상~ 묶음단어 있으면 그것을 찾음
+console.log(str.match(/\d{1,}/g)); //1개 이상 숫자 덩어리 찾기
+console.log(str.match(/\s/g)); //1개 이상 숫자 덩어리 찾기
+
+// \s 사용방법
+var h = "\n  hello    world   !!!   \n";
+console.log(h.replace(/\s/g, ""));
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
