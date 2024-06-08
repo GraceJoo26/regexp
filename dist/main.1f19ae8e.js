@@ -119,7 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"main.js":[function(require,module,exports) {
 console.log(123);
-var str = "\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdbapi.com/?apikey=7035c60c&s=frozen\nThe quick brown fox jumps over the lazy dog.\naabbccdd\n";
+var str = "\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdbapi.com/?apikey=7035c60c&s=frozen\nThe quick brown fox jumps over the lazy dog.\naabbccdd\nD\n";
 
 //생성자
 var regexp = new RegExp("the", "gi");
@@ -137,6 +137,8 @@ str = str.replace(regexp3, "grace");
 console.log(str.replace(regexp3, "grace"));
 console.log(str);
 console.log(str.match(/the/gim));
+console.log(str.match(/d$/gim));
+console.log(str.match(/^t/gim));
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

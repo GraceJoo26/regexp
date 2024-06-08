@@ -6,6 +6,7 @@ thesecon@gmail.com
 https://www.omdbapi.com/?apikey=7035c60c&s=frozen
 The quick brown fox jumps over the lazy dog.
 aabbccdd
+D
 `;
 
 //생성자
@@ -26,3 +27,5 @@ console.log(str.replace(regexp3, "grace"));
 console.log(str);
 
 console.log(str.match(/the/gim));
+console.log(str.match(/d$/gim));
+console.log(str.match(/^t/gim));
