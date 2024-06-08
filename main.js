@@ -7,6 +7,7 @@ https://www.omdbapi.com/?apikey=7035c60c&s=frozen
 The quick brown fox jumps over the lazy dog.
 aabbccdddd
 http://naver.com
+동해물과 백두산이 마르고 닳도록
 `;
 
 //생성자
@@ -35,3 +36,7 @@ console.log(str.match(/fox|dog/g));
 console.log(str.match(/https?/g)); //?앞의 s 가 있을수도 없을수도
 
 console.log(str.match(/\b\w{2,3}\b/g));
+
+console.log(str.match(/[fox]/g)); //str에서 f나, o나, x 를 찾음
+console.log(str.match(/[0-9]{1,}/g)); //str에서 f나, o나, x 를 찾음
+console.log(str.match(/[가-힣]{1,}/g)); //str에서 f나, o나, x 를 찾음

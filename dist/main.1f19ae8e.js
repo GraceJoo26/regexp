@@ -119,7 +119,7 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   return newRequire;
 })({"main.js":[function(require,module,exports) {
 console.log(123);
-var str = "\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdbapi.com/?apikey=7035c60c&s=frozen\nThe quick brown fox jumps over the lazy dog.\naabbccdddd\nhttp://naver.com\n";
+var str = "\n010-1234-5678\nthesecon@gmail.com\nhttps://www.omdbapi.com/?apikey=7035c60c&s=frozen\nThe quick brown fox jumps over the lazy dog.\naabbccdddd\nhttp://naver.com\n\uB3D9\uD574\uBB3C\uACFC \uBC31\uB450\uC0B0\uC774 \uB9C8\uB974\uACE0 \uB2F3\uB3C4\uB85D\n";
 
 //생성자
 var regexp = new RegExp("the", "gi");
@@ -145,6 +145,9 @@ console.log(str.match(/fox|dog/g));
 console.log(str.match(/https?/g)); //?앞의 s 가 있을수도 없을수도
 
 console.log(str.match(/\b\w{2,3}\b/g));
+console.log(str.match(/[fox]/g)); //str에서 f나, o나, x 를 찾음
+console.log(str.match(/[0-9]{1,}/g)); //str에서 f나, o나, x 를 찾음
+console.log(str.match(/[가-힣]{1,}/g)); //str에서 f나, o나, x 를 찾음
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
