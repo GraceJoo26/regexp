@@ -6,7 +6,7 @@ thesecon@gmail.com
 https://www.omdbapi.com/?apikey=7035c60c&s=frozen
 The quick brown fox jumps over the lazy dog.
 aabbccdd
-D
+http://naver.com
 `;
 
 //생성자
@@ -32,3 +32,4 @@ console.log(str.match(/^t/gim));
 
 console.log(str.match(/h..p/g));
 console.log(str.match(/fox|dog/g));
+console.log(str.match(/https?/g));
