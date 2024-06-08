@@ -29,3 +29,5 @@ console.log(str);
 console.log(str.match(/the/gim));
 console.log(str.match(/d$/gim));
 console.log(str.match(/^t/gim));
+
+console.log(str.match(/h..p/g));
